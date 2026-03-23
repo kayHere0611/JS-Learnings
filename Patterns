@@ -1,0 +1,106 @@
+
+// 5x5
+for(let i=1;i<=5;i++){
+    let row=""
+    for(let j=1;j<=5;j++){
+        row+="* "
+    }
+    console.log(row)
+}
+
+// incremental
+for(let i=1;i<=5;i++){
+    let row=""
+    for(let j=1;j<=i;j++){
+        row+="* "
+    }
+    console.log(row)
+}
+// vertical mirror
+for(let i=1;i<=5;i++){
+    let row=""
+    for(let j=1;j<=5-i;j++){
+        row+="  "
+    }
+
+    for(let k=1;k<=i;k++){
+       row+="* "
+    }
+    console.log(row)
+}
+
+// Diamond 
+for(let i=1;i<=5;i++){
+    let row=""
+    for(let j=1;j<=5-i;j++){
+        row+="  "
+    }
+
+    for(let k=1;k<=i;k++){
+        row+="* "
+    }
+    for(let Pi=1;Pi<i;Pi++){
+        if(i==1){
+            row+=""
+        }
+        row+="* "
+    }
+    console.log(row)
+}
+
+for(let i=4;i>=1;i--){
+    let row=""
+    for(let j=5-i;j>=1;j--){
+        row+="  "
+    }
+
+    for(let k=i;k>=1;k--){
+        row+="* "
+    }
+    for(let Pi=i;Pi>1;Pi--){
+        if(i==5){
+            row+=""
+        }
+        row+="* "
+    }
+    console.log(row)
+}
+
+// Butterfly
+for(let i=1;i<=5;i++){
+    let row=""
+    for(let j=1;j<=i;j++){
+        row+="+ "
+    }
+
+    for(let k=3;k>=i-1;k--){
+        row+="  "
+    }
+
+    for(let j2=1;j2<=5-i;j2++){
+        row+="  "
+    }
+    for(let k2=1;k2<=i;k2++){
+        row+="+ "
+    }
+    console.log(row)
+}
+//bottom
+for(let i=4;i>=1;i--){
+    let row=""
+    for(let j=i;j>=1;j--){
+        row+="+ "
+    }
+
+    for(let k=i-1;k<=3;k++){
+        row+="  "
+    }
+
+    for(let j2=5-i;j2>=1;j2--){
+       row+="  "
+    }
+    for(let k2=i;k2>=1;k2--){
+        row+="+ "
+    }
+    console.log(row)
+}
